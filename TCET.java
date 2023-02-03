@@ -34,11 +34,11 @@ public class TCET {
         //APPLICANT DETAILS
         
         driver.findElement(By.xpath("//span[text()='Application Form']")).click();
-        driver.findElement(By.id("first_name")).sendKeys("Vinay");
-        driver.findElement(By.id("last_name")).sendKeys("Prakash");
-        driver.findElement(By.id("dob")).sendKeys("02022001");
-        driver.findElement(By.id("mobile")).sendKeys("9098767253");
-        driver.findElement(By.id("emailid")).sendKeys("vinaypk@gmail.com");
+        driver.findElement(By.id("first_name")).sendKeys("Bruce");
+        driver.findElement(By.id("last_name")).sendKeys("Wayne");
+        driver.findElement(By.id("dob")).sendKeys("02022002");
+        driver.findElement(By.id("mobile")).sendKeys("8987878767");
+        driver.findElement(By.id("emailid")).sendKeys("bruce.wayne@gmail.com");
 
         // Waiting for the page to load
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -161,13 +161,35 @@ public class TCET {
         
         a.sendKeys(Keys.PAGE_DOWN).build().perform();
         
+        a.sendKeys(Keys.TAB).build().perform();
+        
+        a.sendKeys(Keys.TAB).build().perform();
+        
+        a.sendKeys(Keys.SPACE).build().perform();
+        
 //        driver.findElement(By.name("passport_input")).sendKeys("E:\\Jasper\\private\\JAVA\\Automation\\data\\Profile-Male-PNG.png");   
        
-        WebElement Declaration = driver.findElement(By.xpath("(//input[@type='checkbox'])[3]"));
+//        WebDriverWait waitDec = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        
+//        waitDec.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='checkbox'])[3]")));
         
-        Declaration.click();
+//        WebElement Declaration = driver.findElement(By.xpath("(//input[@type='checkbox'])[3]"));
+//        
+//        Declaration.click();
+        
+        a.sendKeys(Keys.PAGE_DOWN).build().perform();
+        
+//        WebDriverWait waitDec = new WebDriverWait(driver, Duration.ofSeconds(20));
+//        
+//        waitDec.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//label[@id='labb']//input[1]")));
+//        
+//        WebElement Declaration = driver.findElement(By.xpath("//label[@id='labb']//input[1]"));
+//        
+//        Declaration.click();
         
         driver.findElement(By.xpath("(//input[@type='submit'])")).click();
+        
+      
         
         
     }
